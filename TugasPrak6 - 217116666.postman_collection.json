@@ -1,0 +1,320 @@
+{
+	"info": {
+		"_postman_id": "0d68cce3-cabe-43a0-888a-1e5155c8d58c",
+		"name": "TugasPrak6 - 217116666",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21vcmhwIjoiMTIzIiwidGlwZSI6MSwiaWF0IjoxNTg2OTM1Njg0fQ.5I_UUh6ls1sXHNuE6EM_ZrJEbk-zyLLPrxNktCo0JQU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"nomorhp\" : \"123\",\r\n\t\"nama\" : \"Wenly\",\r\n\t\"password\" : \"123\",\r\n\t\"alamat\" : \"sby\",\r\n\t\"status\" : \"0\",\r\n\t\"saldo\" : \"10000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"nomorhp\" : \"123\",\r\n\t\"password\" : \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Topup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21vcmhwIjoiMTIzIiwidGlwZSI6MSwiaWF0IjoxNTg2OTY0NDM0fQ.KQSBcQVeAEUL-frgVHcH359Yx3TTIMRC-6epBYAtgXs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"nomorhp\" : \"123\",\r\n\t\"saldo\" : \"110000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/topup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"topup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add House",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21vcmhwIjoiMzIxIiwidGlwZSI6MCwiaWF0IjoxNTg2OTM3MDc1fQ.UR8MSJ_GV-KZegJi-ynxTVTd9Xm3mdOHyiUynpACqjk"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"nama\" : \"asdsc\",\r\n\t\"alamat\" : \"surabaya\",\r\n\t\"tipe\" : \"apartement\",\r\n\t\"max\" : \"2\",\r\n\t\"harga\" : \"10000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/house",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"house"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update house",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21vcmhwIjoiMzIxIiwidGlwZSI6MCwiaWF0IjoxNTg2OTQwODY2fQ.wnvAEqRuio2Fx6IgCIJKtQDx3r-VIWvOwCtzO6hM2Uw"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"nama\" : \"asdsc\",\r\n\t\"alamat\" : \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/house/AS001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"house",
+						"AS001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rent",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21vcmhwIjoiMTIzIiwidGlwZSI6MSwiaWF0IjoxNTg3MjAxNjM1fQ.Y-PjR7_hIeDMEkkBLCX3CsTHYC2OdLay_Yi_IsO9Jzo"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"nohp_peminjam\" : \"123\",\r\n\t\"nohp_pemilik\" : \"321\",\r\n\t\"id\" : \"AS001\",\r\n\t\"startdate\" : \"01/01/2019\",\r\n\t\"enddate\" : \"01/01/2020\",\r\n\t\"total\" : \"92000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/rent",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"rent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "history",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21vcmhwIjoiMTIzIiwidGlwZSI6MSwiaWF0IjoxNTg2OTQwNjk3fQ.VbrloB-8z4IK0AMSNSe7CLFK7nY5dZ_DdOiId1lWxaQ"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"nohp_peminjam\" : \"123\",\r\n\t\"nohp_pemilik\" : \"\",\r\n\t\"id\" : \"1\",\r\n\t\"startdate\" : \"01/01/2019\",\r\n\t\"enddate\" : \"01/01/2020\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/history/:nomorhp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"history",
+						":nomorhp"
+					],
+					"variable": [
+						{
+							"key": "nomorhp",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21vcmhwIjoiMTIzIiwidGlwZSI6MSwiaWF0IjoxNTg2OTY0NDM0fQ.KQSBcQVeAEUL-frgVHcH359Yx3TTIMRC-6epBYAtgXs"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"nohp_peminjam\" : \"123\",\r\n\t\"nohp_pemilik\" : \"\",\r\n\t\"id\" : \"1\",\r\n\t\"startdate\" : \"01/01/2019\",\r\n\t\"enddate\" : \"01/01/2020\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/search?nama=a&tipe=apartement&guest=2&startdate=2019-01-01&enddate=2021-01-01",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"search"
+					],
+					"query": [
+						{
+							"key": "nama",
+							"value": "a"
+						},
+						{
+							"key": "tipe",
+							"value": "apartement"
+						},
+						{
+							"key": "guest",
+							"value": "2"
+						},
+						{
+							"key": "startdate",
+							"value": "2019-01-01"
+						},
+						{
+							"key": "enddate",
+							"value": "2021-01-01"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
