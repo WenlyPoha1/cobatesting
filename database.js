@@ -1,10 +1,11 @@
 var mysql = require("mysql");
-
+require("dotenv").congfig();
 var pool = mysql.createPool({
-    host : "localhost",
-    database : "6666",
-    user : "root",
-    password : ""
+    host : process.env.DB_HOST,
+    database : process.env.DB_NAME,
+    user : process.env.DB_USER,
+    password : process.env.DB_PASS,
+    port : process.env.DB_PORT
 });
 
 function getConnection()
