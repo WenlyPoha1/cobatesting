@@ -306,6 +306,10 @@ app.get("/api/history/:nomorhp", async (req, res)=>{
     }
 })
 
+app.get("/coba", async (req, res)=>{
+    res.send("Ini tanpa db")
+})
+
 app.get("/api/search", async (req, res)=>{
     let conn = await db.getConnection();
     let query = req.query
